@@ -270,6 +270,7 @@ header {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 8px;
+    text-decoration: none;
 }
 
 .platforms {
