@@ -12,8 +12,8 @@ const projects = [
         description: "Обороняй країну від повітряних загроз: дронів, ракет. Керуй радарами та ППО, виявляй цілі й знищуй їх до удару. Кожне рішення впливає на виживання країни.",
         technologies: ["Godot"],
         screenshots: [
-            "images/cloudsync-screenshot1.jpg", // Змініть на шлях до вашого фото
-            "images/cloudsync-screenshot2.jpg"  // Змініть на шлях до вашого фото
+            "images/cloudsync-screenshot1.jpg",
+            "images/cloudsync-screenshot2.jpg"
         ]
     },
     {
@@ -36,8 +36,8 @@ const projects = [
         ],
         technologies: ["Godot"],
         screenshots: [
-            "images/cloudsync-screenshot1.jpg", // Змініть на шлях до вашого фото
-            "images/cloudsync-screenshot2.jpg"  // Змініть на шлях до вашого фото
+            "images/cloudsync-screenshot1.jpg",
+            "images/cloudsync-screenshot2.jpg"
         ]
     }
 ];
