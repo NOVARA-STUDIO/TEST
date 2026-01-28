@@ -18,7 +18,7 @@ const projects = [
             "Історія версій файлів",
             "Низьке споживання ресурсів"
         ],
-        technologies: ["C++", "Qt Framework", "SQLite", "OpenSSL"],
+        technologies: ["Godot"],
         screenshots: [
             "images/cloudsync-screenshot1.jpg", // Змініть на шлях до вашого фото
             "images/cloudsync-screenshot2.jpg"  // Змініть на шлях до вашого фото
