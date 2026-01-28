@@ -116,7 +116,7 @@ header {
 }
 
 .logo {
-    font-size: 84px;
+    font-size: 95px;
     font-weight: 700;
     letter-spacing: -0.5px;
     background: linear-gradient(45deg, #3d8bff, #6eb5ff, #3d8bff, #1e5fcc);
@@ -236,7 +236,7 @@ header {
 }
 
 .project-preview {
-    width: 100%;
+    width: 110%;
     height: 240px;
     background: var(--bg-secondary);
     position: relative;
