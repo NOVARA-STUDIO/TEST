@@ -19,7 +19,7 @@ const projects = [
     {
         id: 1,
         title: "Air Defense Ops",
-        url: "#project-1",
+        url: "#project-2",
         preview: "projects img/Air Defense Ops.jpg",
         platforms: ["windows", "macos", "android"],
         created: "27.12.2025",
