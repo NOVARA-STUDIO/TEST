@@ -5,9 +5,9 @@ const projects = [
         title: "Air Defense Ops",
         url: "#project-1",
         preview: "projects img/Air Defense Ops.jpg",
-        platforms: ["windows", "macos"],
-        created: "15.03.2023",
-        updated: "12.01.2024",
+        platforms: ["windows", "macos"], ["android"],
+        created: "27.12.2025",
+        updated: "13.01.2026",
         downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
         description: "Потужний менеджер для синхронізації файлів між пристроями. CloudSync Manager дозволяє автоматично синхронізувати ваші документи, фото та інші файли між комп'ютерами в реальному часі.",
         features: [
