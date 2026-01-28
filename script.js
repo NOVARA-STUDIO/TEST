@@ -22,10 +22,10 @@ const projects = [
         url: "#project-2",
         preview: "projects img/Air Defense Ops.jpg",
         platforms: ["windows", "macos", "android"],
-        created: "27.12.2025",
-        updated: "13.01.2026",
+        created: "31.01.2026",
+        updated: "",
         downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
-        description: "Обороняй країну від повітряних загроз: дронів, ракет. Керуй радарами та ППО, виявляй цілі й знищуй їх до удару. Кожне рішення впливає на виживання країни.",
+        description: "",
         features: [
             "Автоматична синхронізація в реальному часі",
             "Підтримка великих файлів до 50GB",
