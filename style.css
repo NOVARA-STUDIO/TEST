@@ -300,12 +300,14 @@ header {
 }
 
 .date-row {
+    text-decoration: none !important;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 .date-label {
+    text-decoration: none !important;
     opacity: 0.7;
 }
 
