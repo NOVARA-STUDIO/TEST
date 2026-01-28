@@ -21,7 +21,7 @@ const projects = [
         id: 2,
         title: "",
         url: "#project-2",
-        preview: "projects img/Air Defense Ops.jpg",
+        preview: "projects img/",
         platforms: ["windows", "macos", "android"],
         created: "31.01.2026",
         updated: "",
