@@ -10,6 +10,7 @@ const projects = [
         updated: "13.01.2026",
         downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
         description: "Обороняй країну від повітряних загроз: дронів, ракет. Керуй радарами та ППО, виявляй цілі й знищуй їх до удару. Кожне рішення впливає на виживання країни.",
+        features: [],
         technologies: ["Godot"],
         screenshots: [
             "images/cloudsync-screenshot1.jpg",
