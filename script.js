@@ -22,7 +22,7 @@ const projects = [
         title: "",
         url: "#project-2",
         preview: "projects img/",
-        platforms: ["windows", "macos", "android"],
+        platforms: ["android"],
         created: "31.01.2026",
         updated: "",
         downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
