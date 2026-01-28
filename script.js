@@ -24,7 +24,7 @@ const projects = [
             "images/cloudsync-screenshot2.jpg"  // Змініть на шлях до вашого фото
         ]
     },
-        {
+    {
         id: 1,
         title: "Air Defense Ops",
         url: "#project-1",
