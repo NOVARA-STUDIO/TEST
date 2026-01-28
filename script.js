@@ -25,54 +25,6 @@ const projects = [
         ]
     },
     {
-        id: 2,
-        title: "TaskFlow Mobile",
-        url: "#project-2",
-        preview: "images/taskflow-preview.jpg", // Змініть на шлях до вашого фото
-        platforms: ["android"],
-        created: "22.06.2023",
-        updated: "28.01.2024",
-        downloadUrl: "https://play.google.com/store/apps/details?id=com.novara.taskflow",
-        description: "Інтуїтивний менеджер завдань для Android. TaskFlow допомагає організувати ваш день, встановлювати пріоритети та досягати цілей ефективніше.",
-        features: [
-            "Створення та організація завдань",
-            "Календар та нагадування",
-            "Теги та категорії",
-            "Статистика продуктивності",
-            "Темна та світла теми",
-            "Синхронізація між пристроями"
-        ],
-        technologies: ["Kotlin", "Jetpack Compose", "Room Database", "Material Design 3"],
-        screenshots: [
-            "images/taskflow-screenshot1.jpg", // Змініть на шлях до вашого фото
-            "images/taskflow-screenshot2.jpg"  // Змініть на шлях до вашого фото
-        ]
-    },
-    {
-        id: 3,
-        title: "DevTools Pro",
-        url: "#project-3",
-        preview: "images/devtools-preview.jpg", // Змініть на шлях до вашого фото
-        platforms: ["windows", "macos"],
-        created: "08.09.2022",
-        updated: "05.01.2024",
-        downloadUrl: "https://github.com/novara-studio/devtools-pro/releases/latest",
-        description: "Набір професійних інструментів для розробників. DevTools Pro включає редактор коду, термінал, Git-клієнт та багато інших корисних утиліт в одному додатку.",
-        features: [
-            "Потужний редактор коду з підсвічуванням синтаксису",
-            "Вбудований термінал з підтримкою вкладок",
-            "Git-інтеграція з візуальним інтерфейсом",
-            "Інтеграція з популярними API",
-            "Менеджер баз даних",
-            "Розширення та плагіни"
-        ],
-        technologies: ["Electron", "React", "TypeScript", "Node.js", "Monaco Editor"],
-        screenshots: [
-            "images/devtools-screenshot1.jpg", // Змініть на шлях до вашого фото
-            "images/devtools-screenshot2.jpg"  // Змініть на шлях до вашого фото
-        ]
-    },
-    {
         id: 4,
         title: "HealthTracker",
         url: "#project-4",
