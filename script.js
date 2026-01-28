@@ -5,7 +5,7 @@ const projects = [
         title: "Air Defense Ops",
         url: "#project-1",
         preview: "projects img/Air Defense Ops.jpg",
-        platforms: ["windows", "macos"], ["android"],
+        platforms: ["windows", "macos", "android"],
         created: "27.12.2025",
         updated: "13.01.2026",
         downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
