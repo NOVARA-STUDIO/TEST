@@ -2,9 +2,9 @@
 const projects = [
     {
         id: 1,
-        title: "CloudSync Manager",
+        title: "Air Defense Ops",
         url: "#project-1",
-        preview: "projects img/Air Defense Ops.jpg", // Змініть на шлях до вашого фото
+        preview: "projects img/Air Defense Ops.jpg",
         platforms: ["windows", "macos"],
         created: "15.03.2023",
         updated: "12.01.2024",
