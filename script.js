@@ -17,7 +17,7 @@ const projects = [
         ]
     },
     {
-        id: 1,
+        id: 2,
         title: "Air Defense Ops",
         url: "#project-2",
         preview: "projects img/Air Defense Ops.jpg",
