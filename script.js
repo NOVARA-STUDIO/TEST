@@ -19,7 +19,7 @@ const projects = [
     },
     {
         id: 2,
-        title: "Air Defense Ops",
+        title: "",
         url: "#project-2",
         preview: "projects img/Air Defense Ops.jpg",
         platforms: ["windows", "macos", "android"],
@@ -28,14 +28,9 @@ const projects = [
         downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
         description: "",
         features: [
-            "Автоматична синхронізація в реальному часі",
-            "Підтримка великих файлів до 50GB",
-            "Шифрування даних AES-256",
-            "Селективна синхронізація папок",
-            "Історія версій файлів",
-            "Низьке споживання ресурсів"
+            "Автоматична синхронізація."
         ],
-        technologies: ["Godot"],
+        technologies: ["Godot", "files"],
         screenshots: [
             "images/cloudsync-screenshot1.jpg",
             "images/cloudsync-screenshot2.jpg"
