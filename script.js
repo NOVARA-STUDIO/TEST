@@ -9,9 +9,9 @@ const projects = [
         created: "27.12.2025",
         updated: "13.01.2026",
         downloadUrls: {
-            windows: "https://github.com/novara-studio/air-defense/releases/download/windows",
-            macos: "https://github.com/novara-studio/air-defense/releases/download/macos",
-            android: "https://play.google.com/store/apps/details?id=com.novara.airdefense"
+            windows: "https://github.com/NOVARA-STUDIO/NOVARA-STUDIO/releases/download/exe/Air.Defense.Ops.exe",
+            macos: "https://github.com/NOVARA-STUDIO/NOVARA-STUDIO/releases/download/macOS/Air.Defense.Ops.zip",
+            android: "https://github.com/NOVARA-STUDIO/NOVARA-STUDIO/releases/download/apk/Air.Defense.Ops.apk"
         },
         description: "Обороняй країну від повітряних загроз: дронів, ракет. Керуй радарами та ППО, виявляй цілі й знищуй їх до удару. Кожне рішення впливає на виживання країни.",
         features: [
@@ -36,7 +36,7 @@ const projects = [
         created: "31.01.2026",
         updated: "31.01.2026",
         downloadUrls: {
-            android: "https://play.google.com/store/apps/details?id=com.novara.newproject"
+            android: ""
         },
         description: "Опис нового проєкту буде тут.",
         features: [
