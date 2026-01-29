@@ -8,36 +8,46 @@ const projects = [
         platforms: ["windows", "macos", "android"],
         created: "27.12.2025",
         updated: "13.01.2026",
-        downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
-        downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
-        downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
+        downloadUrls: {
+            windows: "https://github.com/novara-studio/air-defense/releases/download/windows",
+            macos: "https://github.com/novara-studio/air-defense/releases/download/macos",
+            android: "https://play.google.com/store/apps/details?id=com.novara.airdefense"
+        },
         description: "Обороняй країну від повітряних загроз: дронів, ракет. Керуй радарами та ППО, виявляй цілі й знищуй їх до удару. Кожне рішення впливає на виживання країни.",
-        features: [],
+        features: [
+            "Реалістична система виявлення повітряних цілей",
+            "Різні типи ракет та систем ППО",
+            "Динамічні погодні умови",
+            "Стратегічне управління ресурсами",
+            "Кампанія та режим виживання"
+        ],
         technologies: ["Godot"],
         screenshots: [
-            "images/cloudsync-screenshot1.jpg",
-            "images/cloudsync-screenshot2.jpg"
+            "images/airdefense-screenshot1.jpg",
+            "images/airdefense-screenshot2.jpg"
         ]
     },
     {
         id: 2,
-        title: "",
+        title: "Новий проєкт",
         url: "#project-2",
-        preview: "projects img/",
+        preview: "projects img/project2.jpg",
         platforms: ["android"],
         created: "31.01.2026",
-        updated: "",
-        downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
-        downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
-        downloadUrl: "https://github.com/novara-studio/cloudsync/releases/latest",
-        description: "",
+        updated: "31.01.2026",
+        downloadUrls: {
+            android: "https://play.google.com/store/apps/details?id=com.novara.newproject"
+        },
+        description: "Опис нового проєкту буде тут.",
         features: [
-            "Автоматична синхронізація."
+            "Автоматична синхронізація",
+            "Простий інтерфейс",
+            "Швидка робота"
         ],
-        technologies: ["Godot", "files"],
+        technologies: ["Godot"],
         screenshots: [
-            "images/cloudsync-screenshot1.jpg",
-            "images/cloudsync-screenshot2.jpg"
+            "images/project2-screenshot1.jpg",
+            "images/project2-screenshot2.jpg"
         ]
     }
 ];
@@ -47,6 +57,13 @@ const platformIcons = {
     android: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3435-4.1021-2.6892-7.5743-6.1185-9.4396"/></svg>`,
     windows: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>`,
     macos: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.94 5.19A4.38 4.38 0 0 0 16 2a4.44 4.44 0 0 0-3 1.52 4.17 4.17 0 0 0-1 3.09 3.69 3.69 0 0 0 2.94-1.42zm2.52 7.44a4.51 4.51 0 0 1 2.16-3.81 4.66 4.66 0 0 0-3.66-2c-1.56-.16-3 .91-3.83.91s-2-.89-3.3-.87a4.92 4.92 0 0 0-4.14 2.53C2.93 12.45 4.24 17 5.94 19.47c.8 1.21 1.8 2.58 3.12 2.53s1.75-.82 3.28-.82 2 .82 3.3.79 2.22-1.24 3.06-2.45a11 11 0 0 0 1.38-2.85 4.41 4.41 0 0 1-2.62-4.08z"/></svg>`
+};
+
+// Platform names
+const platformNames = {
+    android: "Android",
+    windows: "Windows",
+    macos: "macOS"
 };
 
 // Render projects
@@ -142,15 +159,26 @@ function showProjectDetail(projectId) {
         `<div class="platform-icon">${platformIcons[platform]}</div>`
     ).join('');
 
+    // Build download buttons for each platform
+    const downloadButtonsHTML = project.platforms.map(platform => {
+        const url = project.downloadUrls[platform];
+        return `
+            <a href="${url}" target="_blank" rel="noopener" class="download-button download-button-${platform}">
+                <div class="platform-icon">${platformIcons[platform]}</div>
+                <span>Завантажити для ${platformNames[platform]}</span>
+            </a>
+        `;
+    }).join('');
+
     // Build features HTML
-    const featuresHTML = project.features.map(feature => `
+    const featuresHTML = project.features.length > 0 ? project.features.map(feature => `
         <li class="feature-item">
             <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="20 6 9 17 4 12"/>
             </svg>
             <span>${feature}</span>
         </li>
-    `).join('');
+    `).join('') : '<li class="feature-item"><span>Особливості будуть додані пізніше</span></li>';
 
     // Build technologies HTML
     const techHTML = project.technologies.map(tech => 
@@ -183,30 +211,9 @@ function showProjectDetail(projectId) {
                 </div>
             </div>
             <p class="project-detail-description">${project.description}</p>
-            <a href="${project.downloadUrl}" target="_blank" rel="noopener" class="download-button">
-                <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                <span>Завантажити</span>
-            </a>
-            <a href="${project.downloadUrl}" target="_blank" rel="noopener" class="download-button">
-                <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                <span>Завантажити</span>
-            </a>
-            <a href="${project.downloadUrl}" target="_blank" rel="noopener" class="download-button">
-                <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                <span>Завантажити</span>
-            </a>
+            <div class="download-buttons-container">
+                ${downloadButtonsHTML}
+            </div>
         </div>
 
         <div class="project-section">
